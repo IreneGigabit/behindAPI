@@ -1,0 +1,6 @@
+D:\Download\Head First\WebServicePrj\bin\WebServicePrj.dll.config
+D:\Download\Head First\WebServicePrj\bin\WebServicePrj.dll
+D:\Download\Head First\WebServicePrj\bin\WebServicePrj.pdb
+D:\Download\Head First\WebServicePrj\obj\Debug\WebServicePrj.csprojResolveAssemblyReference.cache
+D:\Download\Head First\WebServicePrj\obj\Debug\WebServicePrj.dll
+D:\Download\Head First\WebServicePrj\obj\Debug\WebServicePrj.pdb
