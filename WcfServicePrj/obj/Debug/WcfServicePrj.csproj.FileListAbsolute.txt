@@ -1,0 +1,6 @@
+D:\Download\Head First\WcfServicePrj\bin\WcfServicePrj.dll.config
+D:\Download\Head First\WcfServicePrj\bin\WcfServicePrj.dll
+D:\Download\Head First\WcfServicePrj\bin\WcfServicePrj.pdb
+D:\Download\Head First\WcfServicePrj\obj\Debug\WcfServicePrj.csprojResolveAssemblyReference.cache
+D:\Download\Head First\WcfServicePrj\obj\Debug\WcfServicePrj.dll
+D:\Download\Head First\WcfServicePrj\obj\Debug\WcfServicePrj.pdb
