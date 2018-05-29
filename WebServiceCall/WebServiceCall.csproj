@@ -60,6 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <Content Include="WebForm7File.aspx" />
     <None Include="Service References\ServiceReferenceDB\WebService4.disco" />
     <None Include="Service References\ServiceReferenceDB\configuration91.svcinfo" />
     <None Include="Service References\ServiceReferenceDB\configuration.svcinfo" />
@@ -74,10 +75,21 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="Service References\ServiceReferenceFile\WebServiceCall.ServiceReferenceFile.UploadFileResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\ServiceReferenceFile\WebServiceFile.wsdl" />
     <None Include="Service References\ServiceReferenceLogin\WebService6User.disco" />
     <None Include="Service References\ServiceReferenceLogin\configuration91.svcinfo" />
     <None Include="Service References\ServiceReferenceLogin\configuration.svcinfo" />
     <None Include="Service References\ServiceReferenceLogin\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ServiceReferenceFile\WebServiceFile.disco" />
+    <None Include="Service References\ServiceReferenceFile\configuration91.svcinfo" />
+    <None Include="Service References\ServiceReferenceFile\configuration.svcinfo" />
+    <None Include="Service References\ServiceReferenceFile\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -126,6 +138,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Service References\ServiceReferenceFile\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Service References\ServiceReferenceLogin\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -159,6 +176,13 @@
     <Compile Include="WebForm1.aspx.designer.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
+    <Compile Include="WebForm7File.aspx.cs">
+      <DependentUpon>WebForm7File.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm7File.aspx.designer.cs">
+      <DependentUpon>WebForm7File.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\ServiceReference1\WebService1.wsdl" />
@@ -176,6 +200,7 @@
     <WCFMetadataStorage Include="Service References\ServiceReference1\" />
     <WCFMetadataStorage Include="Service References\ServiceReferenceDB\" />
     <WCFMetadataStorage Include="Service References\ServiceReferenceDS\" />
+    <WCFMetadataStorage Include="Service References\ServiceReferenceFile\" />
     <WCFMetadataStorage Include="Service References\ServiceReferenceLogin\" />
   </ItemGroup>
   <PropertyGroup>
