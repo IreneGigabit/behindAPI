@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ASP.NET Web API</title>
+    <link href="../Content/Site.css" rel="stylesheet" />
+    <script type="text/javascript" src="../Scripts/jquery-1.8.2.min.js"></script>
+    <script>
+        function getProducts() {
+            //Send an AJAX request
+            $.getJSON("/api/Product/",
+            function (data) {
+                $("#products").empty();
+
+                //On success,'data' contains a lit of products.
+                $.each(data, function (key, val) {
+                    //呈現出來的文字(搜尋結果)。
+                    var row = '<td>' + val.ProductName + '</td><td>' + val.ProductPrice + '</td>';
+
+                    //Add a table row for the product.
+                    $('<tr/>', { html: row })
+                    .appendTo($("#products"));
+                });
+            });
+        }
+
+        function find() {
+            var id = $("#prodId").val();
+            $.getJSON("/api/Product/" + id,
+            function (data) {
+                var str = data.ProductName + ': $' + data.ProductPrice;
+                $("#product").text(str);
+            })
+            .fail(
+                function (jqXHR, textStatus, err) {
+                    $('#product').text("Error:" + err);
+                });
+        }
+
+        $(document).ready(getProducts);
+    </script>
+</head>
+<body id="body">
+    <div class="main-content">
+        <table>
+            <thead>
+                <tr><th>Name</th><th>Price</th></tr>
+            </thead>
+            <tbody id="products"></tbody>
+        </table>
+
+        <div>
+            <label for="prodId">ID:</label>
+            <input type="text" id="prodId" size="5" />
+            <input type="button" value="Serch" onclick="find();" />
+
+            <p id="product" />
+        </div>
+    </div>
+</body>
+</html>
