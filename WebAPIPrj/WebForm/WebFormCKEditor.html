@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <form name="myForm" method="post">
+            <textarea class="ckeditor" name="myText" id="myText"></textarea>
+        </form>
+    </div>
+
+
+    <!--引用ckeditor.js-->
+    <script src="../Content/ckeditor/ckeditor.js"></script>
+    <!--加入圖片上傳頁籤，放在</body>前面，若放在網頁head區段的話，會抓不到textarea DOM-->
+    <script type="text/javascript">
+        //, { filebrowserImageUploadUrl: '/api/File' }
+        CKEDITOR.replace('myText'
+        , {
+            filebrowserImageUploadUrl: '/CKExt/Upload'
+           , height: 500
+        });
+    </script>
+</body>
+</html>
