@@ -9,5 +9,9 @@ namespace WebAPIPrj.Controllers {
 		public ActionResult Index() {
 			return View();
 		}
+
+        public ActionResult CkEditorSample() {
+            return View();
+        }
 	}
 }

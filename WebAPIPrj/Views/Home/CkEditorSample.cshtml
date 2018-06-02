@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "CkEditorSample";
+}
+
+<h2>SampleEditor</h2>
+
+<div>
+    <textarea id="txtBody"></textarea>
+</div>
+
+<script src="~/Scripts/ckeditor/ckeditor.js"></script>
+<script>
+	//CKEDITOR.replace('txtBody');
+	CKEDITOR.replace('txtBody', {
+	    height: 400,
+	    //filebrowserImageUploadUrl: '/api/File',
+	    filebrowserImageUploadUrl: '/CKExt/UploadImage',
+		filebrowserBrowseUrl: '/RichContent/FileBrowser',
+		filebrowserWindowWidth: 800,
+		filebrowserWindowHeight: 600
+	});
+</script>
+
