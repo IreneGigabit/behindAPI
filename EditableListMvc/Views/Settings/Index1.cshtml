@@ -1,0 +1,25 @@
+﻿@using EditableListMvc.Models;
+@model MyViewModel
+
+@using (Html.BeginForm("Edit", "Settings", FormMethod.Post, new { @class = "form-horizontal", id = "editSettings" })) {
+    @Html.EditorFor(x => x.Settings)
+    <input type="submit" value="modify" />
+}
+
+@section scripts {
+    <script type="text/javascript">
+        $('#editSettings').submit(function () {
+            if ($(this).valid()) {
+                $.ajax({
+                    url: this.action,
+                    type: this.method,
+                    data: $(this).serialize(),
+                    success: function (result) {
+                        alert(result);
+                    }
+                });
+            }
+            return false;
+        });
+    </script>
+}
