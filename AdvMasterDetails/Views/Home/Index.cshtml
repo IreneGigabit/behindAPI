@@ -72,17 +72,11 @@
         </div>
     </div>
 </div>
+<!--
 <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
 <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" />
 <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-
-<script type="text/javascript">
-    $(function () {
-        $("#orderDate").datepicker({
-            dateFormate: 'mm-dd-yy'
-        });
-    });
-</script>
+-->
 <style>
     span.error{
         display:block;
@@ -94,3 +88,13 @@
         background-color:rgba(255,0.0,0.35);
     }
 </style>
+
+@section scripts{
+<script type="text/javascript">
+    $(function () {
+        $("#orderDate").datepicker({
+            dateFormate: 'mm-dd-yy'
+        });
+    });
+</script>
+}
