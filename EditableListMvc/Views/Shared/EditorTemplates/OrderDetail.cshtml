@@ -1,0 +1,20 @@
+﻿@using EditableListMvc.Models;
+@model OrderDetail
+<tr>
+    <td>
+        @Html.EditorFor(model => model.OrderItemsID)
+        @Html.ValidationMessageFor(model => model.OrderItemsID, "", new { @class = "text-danger" })
+    </td>
+    <td>
+        @Html.EditorFor(model => model.ItemName)
+        @Html.ValidationMessageFor(model => model.ItemName, "", new { @class = "text-danger" })
+    </td>
+    <td>
+        @Html.EditorFor(model => model.Rate)
+        @Html.ValidationMessageFor(model => model.Rate, "", new { @class = "text-danger" })
+    </td>
+    <td>
+        @Html.EditorFor(model => model.Quantity)
+        @Html.ValidationMessageFor(model => model.Quantity, "", new { @class = "text-danger" })
+    </td>
+</tr>

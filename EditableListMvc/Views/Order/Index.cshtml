@@ -1,0 +1,54 @@
+﻿@using EditableListMvc.Models
+@model Order
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+@using (Html.BeginForm("Index", "Order", FormMethod.Post)) {
+    <table class="table">
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.OrderID)</th>
+            <th>@Html.EditorFor(model => model.OrderID)</th>
+        </tr>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.OrderNo)</th>
+            <th>@Html.EditorFor(model => model.OrderNo)</th>
+        </tr>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.OrderDate)</th>
+            <th>@Html.EditorFor(model => model.OrderDate)</th>
+        </tr>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.Description)</th>
+            <th>@Html.TextAreaFor(model => model.Description)</th>
+        </tr>
+    </table>
+
+    <table class="table">
+            @Html.EditorFor(model => model.OrderDetails)
+        <tr>
+            <td>
+                <input class="text-box single-line" data-val="true" data-val-number="欄位 OrderItemsID 必須是數字。" data-val-required="OrderItemsID 欄位是必要項。" id="OrderDetails_@(Model.OrderDetails.Count)__OrderItemsID" name="OrderDetails[@(Model.OrderDetails.Count)].OrderItemsID" type="number" value="" />
+                <span class="field-validation-valid text-danger" data-valmsg-for="OrderDetails[@(Model.OrderDetails.Count)].OrderItemsID" data-valmsg-replace="true"></span>
+            </td>
+            <td>
+                <input class="text-box single-line" id="OrderDetails_@(Model.OrderDetails.Count)__ItemName" name="OrderDetails[@(Model.OrderDetails.Count)].ItemName" type="text" value="" />
+                <span class="field-validation-valid text-danger" data-valmsg-for="OrderDetails[@(Model.OrderDetails.Count)].ItemName" data-valmsg-replace="true"></span>
+            </td>
+            <td>
+                <input class="text-box single-line" data-val="true" data-val-number="欄位 Rate 必須是數字。" data-val-required="Rate 欄位是必要項。" id="OrderDetails_@(Model.OrderDetails.Count)__Rate" name="OrderDetails[@(Model.OrderDetails.Count)].Rate" type="text" value="" />
+                <span class="field-validation-valid text-danger" data-valmsg-for="OrderDetails[@(Model.OrderDetails.Count)].Rate" data-valmsg-replace="true"></span>
+            </td>
+            <td>
+                <input class="text-box single-line" data-val="true" data-val-number="欄位 Quantity 必須是數字。" data-val-required="Quantity 欄位是必要項。" id="OrderDetails_@(Model.OrderDetails.Count)__Quantity" name="OrderDetails[@(Model.OrderDetails.Count)].Quantity" type="number" value="" />
+                <span class="field-validation-valid text-danger" data-valmsg-for="OrderDetails[@(Model.OrderDetails.Count)].Quantity" data-valmsg-replace="true"></span>
+            </td>
+        </tr>
+    </table>
+    <p>
+        <input name="command" type="submit" value="Save" />
+        <input name="command" type="submit" value="Delete" />
+    </p>
+}

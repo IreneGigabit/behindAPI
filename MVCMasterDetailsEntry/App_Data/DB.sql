@@ -15,7 +15,7 @@ CREATE TABLE [dbo].[OrderDetails]
     [Quantity] INT NOT NULL, 
     [Rate] NUMERIC(12, 2) NOT NULL, 
     [TotalAmount] NUMERIC(12, 2) NOT NULL, 
-    CONSTRAINT [FK_OrderDetails_Order] FOREIGN KEY ([OrderId]) REFERENCES [Order]([OrderId]),
+    CONSTRAINT [FK_OrderDetails_Order] FOREIGN KEY ([OrderID]) REFERENCES [Order]([OrderID]),
 
 )
 

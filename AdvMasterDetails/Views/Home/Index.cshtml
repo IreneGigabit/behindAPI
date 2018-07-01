@@ -16,7 +16,7 @@
                 <td>Order Date</td>
                 <td>
                     <input type="text" id="orderDate" class="form-control" />
-                    <span class="error">valid order date required (ex:MM-dd-yyyy)</span>
+                    <span class="error">valid order date required (ex:yyyy/mm/dd)</span>
                 </td>
             </tr>
             <tr>
@@ -40,13 +40,13 @@
             <tr class="mycontainer" id="mainrow">
                 <td>
                     <select id="productCategory" class="pc form-control" onchange="LoadProduct(this)">
-                        <option>Select</option>
+                        <option value="0">Select...</option>
                     </select>
                     <span class="error">Select category</span>
                 </td>
                 <td>
                     <select id="product" class="product form-control">
-                        <option>Select</option>
+                        <option value="0">Select...</option>
                     </select>
                     <span class="error">Select product</span>
                 </td>
@@ -65,7 +65,7 @@
         </table>
         <div id="orderItems">
             <table class="table table-responsive" id="orderdetailsItems"></table>
-            <span id="orderItemError" style="error"></span>
+            <span id="orderItemError" style="color:red"></span>
         </div>
         <div style="padding:10px 0;text-align:right">
             <input id="submit" type="button" value="Save Order" class="btn btn-warning" style="padding:10px 20px" />
@@ -77,6 +77,7 @@
 <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" />
 <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 -->
+<script src="~/Scripts/myScripts.js"></script>
 <style>
     span.error{
         display:block;
@@ -93,7 +94,7 @@
 <script type="text/javascript">
     $(function () {
         $("#orderDate").datepicker({
-            dateFormate: 'mm-dd-yy'
+            dateFormat: 'yy/mm/dd'
         });
     });
 </script>
